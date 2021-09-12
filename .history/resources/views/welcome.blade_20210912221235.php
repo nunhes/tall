@@ -1,5 +1,4 @@
 <x-guest-layout>
-    <livewire:landing-page></livewire:landing-page>
     <div class="flex flex-col bg-indigo-900 w-full h-screen" x-data="{
         showSubscritor: false,
      }">
