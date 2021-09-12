@@ -56,7 +56,7 @@ E aí está:
 
 http://127.0.0.1:8000/
 
-![Primeiro paso da instalación de Laravel](https://www.ambosass.com/docs/assets/tall_001.png)
+![Primeiro paso da instalación de Laravel](http://ambosass.com/docs/assets/tall_001.png)
 
 ### Engadir dependencias
 
