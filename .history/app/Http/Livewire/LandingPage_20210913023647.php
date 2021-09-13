@@ -17,17 +17,13 @@ class LandingPage extends Component
     {
         $this->validate();
 
-        DB::transaction(function () {
-            $subscritor = Subscritor::create([
-                'email' => $this->email,
-            ]);
+        $subscritor = Subscritor::create([
+            'email' => $this->email,
+        ]);
 
-            $notification = new VerifyEmail;
+        $notification =
 
-            $subscritor->notify($notification);
-        }, $deadlockRestries = 5);
-
-        $this->reset('email');
+            $this->reset('email');
     }
     public function render()
     {

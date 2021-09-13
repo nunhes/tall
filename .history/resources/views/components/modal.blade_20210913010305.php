@@ -1,0 +1,5 @@
+ <div class="flex fixed top-0 bg-gray-200 bg-opacity-60 items-center w-full h-full" x-show="showSubscritor" x-on:click.self="showSubscritor=false" x-on:keydown.escape.window="showSubscritor=false">
+     <div {{ $attributes->merge(['class' => 'm-auto bg-grey-200 shadow-2xl rounded-xl p-8']) }}>
+         {{ $slot }}
+     </div>
+ </div>

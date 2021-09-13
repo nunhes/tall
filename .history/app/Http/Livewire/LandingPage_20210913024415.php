@@ -17,15 +17,15 @@ class LandingPage extends Component
     {
         $this->validate();
 
-        DB::transaction(function () {
-            $subscritor = Subscritor::create([
-                'email' => $this->email,
-            ]);
+        DB::transaction(function() {}, $deadlockRestries = 5)
 
-            $notification = new VerifyEmail;
+        $subscritor = Subscritor::create([
+            'email' => $this->email,
+        ]);
 
-            $subscritor->notify($notification);
-        }, $deadlockRestries = 5);
+        $notification = new VerifyEmail;
+
+        $subscritor->notify($notification);
 
         $this->reset('email');
     }

@@ -1,6 +1,6 @@
 <div class="flex flex-col bg-indigo-900 w-full h-screen" x-data="{
-        showSubscritor: false,
-        showSuccess: false,
+        showSubscritor: true,
+        showSuccess: true,
      }">
     <nav class="flex pt-5 justify-between container mx-auto text-indigo-200">
         <a class="text-4xl font-extrabold" href="/">
@@ -24,22 +24,16 @@
         </div>
     </div>
 
-    <x-modal class="bg-pink-500" trigger="showSubscritor">
+    <x-modal class="bg-pink-500">
         <p class="text-white text-5xl font-extrabold text-center"> Imos alo! </p>
         <form class="flex flex-col items-center p-24" wire:submit.prevent="subscribe">
             <x-input class="px-5 py-3 w-80 border border-blue-400" type="email" name="email" placeholder="Email address" wire:model="email"></x-input>
-            <span class="text-gray-100 text-xs">
-                {{
-                    $errors->has('email')
-                    ? $errors->first('email')
-                    : 'We will send you a confirmation email.'
-                }}
-            </span>
+            <span class="text-gray-100 text-xs">We will send you a confirmation email.</span>
             <x-button class="py-3 px-5 mt-5 w-80 bg-blue-500 justify-center" wire:>Get in</x-button>
         </form>
     </x-modal>
 
-    <x-modal class="bg-green-500" trigger="showSuccess">
+    <x-modal class="bg-pink-500">
         <p class="animate-pulse text-white text-9xl font-extrabold text-center"> &check; </p>
         <p class="text-white text-5xl font-extrabold text-center mt-16"> Grande! </p>
         <p class="text-white text-3xl text-center"> Consulta o teu correo! </p>

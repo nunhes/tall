@@ -31,7 +31,7 @@
             <span class="text-gray-100 text-xs">
                 {{
                     $errors->has('email')
-                    ? $errors->first('email')
+                    ? $error->first('email')
                     : 'We will send you a confirmation email.'
                 }}
             </span>
